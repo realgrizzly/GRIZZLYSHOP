@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>สมัครสมาชิก | GrizzlyShop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+</head>
+
+<body>
+
+    <div id="siteHeader"></div>
+
+    <main class="auth-container">
+
+        <h1>สร้างบัญชี <span>GrizzlyShop</span></h1>
+
+        <p class="auth-subtitle">
+            สมัครสมาชิกเพื่อเริ่มต้นใช้งาน
+        </p>
+
+        <form id="registerForm" class="auth-form">
+
+            <label for="username">ชื่อผู้ใช้</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="ตั้งชื่อผู้ใช้"
+                minlength="3"
+                maxlength="20"
+                pattern="[A-Za-z0-9_]+"
+                required
+            >
+
+            <label for="email">อีเมล</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@email.com"
+                required
+            >
+
+            <label for="password">รหัสผ่าน</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="อย่างน้อย 8 ตัวอักษร"
+                minlength="8"
+                required
+            >
+
+            <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="กรอกรหัสผ่านอีกครั้ง"
+                minlength="8"
+                required
+            >
+
+            <button type="submit" class="auth-button">
+                สมัครสมาชิก
+            </button>
+
+            <p id="registerMessage" class="auth-message"></p>
+
+        </form>
+
+        <div class="auth-footer">
+            มีบัญชีอยู่แล้ว?
+            <a href="login.html">เข้าสู่ระบบ</a>
+        </div>
+
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../assets/js/supabase.js"></script>
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/auth.js"></script>
+
+</body>
+</html>

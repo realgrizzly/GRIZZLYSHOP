@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GRIZZLY SHOP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="products">
+    <div id="siteHeader"></div>
+    <main class="wrap page-main">
+        <div class="breadcrumb">
+            <a href="../index.html">หน้าหลัก</a> / ร้านค้าทั้งหมด
+        </div>
+        <div class="page-title">
+            <div>
+                <small>GRIZZLYSHOP STORE</small>
+                <h1>สินค้าทั้งหมด <span>Products</span></h1>
+                <p>เลือกชมสินค้าเกมและไอเทมที่คุณกำลังมองหา</p>
+            </div>
+        </div>
+        <div class="shop-toolbar">
+            <div class="filters">
+                <button class="selected" data-cat="ทั้งหมด">ทั้งหมด</button>
+                <button data-cat="เติมเกม">เติมเกม</button>
+                <button data-cat="ไอเทมเกม">ไอเทมเกม</button>
+                <button data-cat="บัตรเติมเงิน">บัตรเติมเงิน</button>
+                <button data-cat="อุปกรณ์เกมมิ่ง">อุปกรณ์เกมมิ่ง</button>
+            </div>
+            <select id="sort">
+                <option value="featured">สินค้าแนะนำ</option>
+                <option value="low">ราคาน้อยไปมาก</option>
+                <option value="high">ราคามากไปน้อย</option>
+            </select>
+        </div>
+        <div class="products product-list" id="allProducts"></div>
+        <p class="empty" id="empty" hidden>ไม่พบสินค้าที่ค้นหา</p>
+    </main>
+    <div id="siteFooter"></div>
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/products-data.js"></script>
+    <script src="../assets/js/products-page.js"></script>
+</body>
+</html>

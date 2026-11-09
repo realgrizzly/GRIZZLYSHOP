@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GRIZZLY SHOP</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="auth">
+    <div id="siteHeader">
+    </div>
+    
+    <main class="auth-wrap">
+        <form class="auth-card" id="authForm">
+            <div class="auth-logo">
+                <img src="assets/images/GrizzlyShop Gaming Logo.png"alt="GRIZZLY SHOP Logo"class="logo-image"></div>
+            <small>WELCOME TO GRIZZLYSHOP</small>
+            <h1 id="authHeading">เข้าสู่ระบบ</h1>
+            <p>เข้าสู่ระบบเพื่อเลือกซื้อสินค้าและติดตามคำสั่งซื้อ</p>
+            
+            <label id="nameField" hidden>
+                ชื่อผู้ใช้
+                <input type="text" placeholder="ชื่อที่ใช้แสดง">
+            </label>
+
+            <label>
+                อีเมล
+                <input type="email" required placeholder="you@example.com">
+            </label>
+
+            <label>
+                รหัสผ่าน
+                <input type="password" required minlength="6" placeholder="อย่างน้อย 6 ตัวอักษร">
+            </label>
+
+            <button class="primary" type="submit" id="authSubmit">เข้าสู่ระบบ</button>
+            
+            <div class="auth-switch">
+                <span id="switchText">ยังไม่มีบัญชี?</span> 
+                <a href="register.html" id="switchAuth">สมัครสมาชิก</a>
+            
+            </div>
+            <p class="note">หน้าตัวอย่าง — ยังไม่ได้เชื่อม Firebase Authentication</p>
+        </form>
+    </main>
+    
+    <div id="siteFooter">
+
+    </div>
+    
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/auth.js"></script>
+
+</body>
+</html>

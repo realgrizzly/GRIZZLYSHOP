@@ -1,0 +1,51 @@
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Supabase Private Files
+# =========================
+supabase/.env
+supabase/.env.*
+supabase/.temp/
+supabase/.branches/
+
+# Private configuration
+config/private.*
+config/secrets.*
+
+# =========================
+# Dependencies
+# =========================
+node_modules/
+vendor/
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# =========================
+# Build & Cache
+# =========================
+dist/
+build/
+.cache/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Operating System
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini

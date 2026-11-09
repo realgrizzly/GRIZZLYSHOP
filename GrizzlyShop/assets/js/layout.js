@@ -1,0 +1,7 @@
+const isPage=document.body.dataset.page;const base=isPage==="home"?"":"../";
+const navItems=[["home","⌂","หน้าหลัก",base+"index.html"],["products","▣","ร้านค้า",base+"pages/products.html"],["premium","✧","แอพพรีเมียม",base+"pages/premium.html"]];
+
+document.getElementById("siteHeader").innerHTML=`<div class="topline">&nbsp; ✦</div><header class="navbar"><a class="logo" href="${base}index.html"><span class="logo-mark">G</span><span>GRIZZLY<span>SHOP</span><small>GAMING STORE</small></span></a><nav id="mainNav">${navItems.map(([key,icon,label,url])=>`<a class="${isPage===key?"active":""}" href="${url}">${icon} &nbsp;${label}</a>`).join("")}</nav><div class="nav-right"><label class="search"><input id="globalSearch" placeholder="ค้นหาสินค้า..."><span>⌕</span></label><a class="nav-btn" href="${base}pages/login.html">♙ สมัครสมาชิก / เข้าสู่ระบบ</a></div><button class="hamburger" id="hamburger">☰</button></header>`;
+document.getElementById("siteFooter").innerHTML=`<footer><a class="logo" href="${base}index.html"><span class="logo-mark">G</span><span>GRIZZLY<span>SHOP</span><small>GAMING STORE</small></span></a><p>© 2026 GrizzlyShop. All rights reserved.</p><div>FB &nbsp; IG &nbsp; DISCORD</div></footer>`;
+document.getElementById("hamburger").addEventListener("click",()=>document.getElementById("mainNav").classList.toggle("open"));
+document.getElementById("globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter"){location.href=base+"pages/products.html?q="+encodeURIComponent(e.target.value)}});

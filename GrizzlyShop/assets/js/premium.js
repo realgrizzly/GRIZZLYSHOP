@@ -1,0 +1,1 @@
+document.querySelectorAll("[data-premium]").forEach(b=>b.addEventListener("click",()=>notify(`คุณเลือก ${b.dataset.premium} — ระบบสั่งซื้อยังไม่เชื่อมต่อ`)));
